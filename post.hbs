@@ -16,8 +16,9 @@
 </header>
 
 <main class="content" role="main">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="/assets/local_js/common.js"></script>
     <article class="{{post_class}}">
-
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
@@ -28,6 +29,28 @@
         <section class="post-content">
             {{content}}
         </section>
+
+        <div class="money-like" id="like-money">
+            <div class="reward-button">赏
+            <span class="money-code" style="display: none;">
+            <span class="alipay-code">
+                <a href="javascript:;">
+                <img data-url="/assets/images/qr_pay_alipay.png" class="alipay-img" src="/assets/images/qr_pay_alipay.png"><b>支付宝打赏</b>
+                </a>
+            </span>
+            <span class="wechat-code">
+                <img data-url="/assets/images/qr_pay_wechat.png" class="wechat-img" src="/assets/images/qr_pay_wechat.png"><b>微信打赏</b>
+            </span>
+            </span>
+
+            </div>
+            <p class="money-notice">若你觉得我的文章对你有帮助, 欢迎点击上方按钮对我打赏</p>
+        </div>
+
+        <div class="qr-code">
+            <img src="https://encrypt.proxy.is26.com/qr/download/qr?content={{url absolute="true"}}" alt="">
+            <p>扫描二维码, 分享此文章</p>
+        </div>
 
         <footer class="post-footer">
 
@@ -56,28 +79,20 @@
 
         {{/author}}
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
-
         </footer>
 
     </article>
 </main>
 
 <aside class="read-next">
+    {{#prev_post}}
+        <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+            <section class="post">
+                <h2>{{title}}</h2>
+                <p>{{excerpt words="19"}}&hellip;</p>
+            </section>
+        </a>
+    {{/prev_post}}
     {{#next_post}}
     <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
@@ -86,14 +101,23 @@
         </section>
     </a>
     {{/next_post}}
-    {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
-    {{/prev_post}}
 </aside>
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{url}}" data-title="{{title}}" data-url="{{url}}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"imdaichao"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+<!-- 多说公共JS代码 end -->
 
 {{/post}}

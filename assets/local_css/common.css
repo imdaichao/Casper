@@ -1,0 +1,228 @@
+.copyright {
+    width: 100%;
+    text-align: center;
+
+}
+
+.poweredby {
+    width: 100%;
+    text-align: center;
+}
+
+.author {
+    text-align: center;
+    width: 100%;
+}
+
+.read-next + .site-footer {
+    position: relative;
+}
+
+.qr-code {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.read-next-story .post:before {
+    content: "下一篇";
+}
+
+.read-next-story.prev .post:before {
+    content: "上一篇";
+}
+
+.read-next {
+    margin-top: 0;
+    margin-bottom: 5rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.ds-thread {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 0rem;
+}
+
+.site-footer {
+    border-top: #EBF2F6 1px solid;
+}
+
+.money-like .reward-button {
+    font-size: 2.4rem;
+    line-height: 4.6rem;
+    position: relative;
+    display: block;
+    width: 4.6rem;
+    height: 4.6rem;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    border: 1px solid #f1b60e;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,#fccd60 0,#fbae12 100%,#2989d8 100%,#207cca 100%)
+}
+
+.money-like {
+    padding: 2rem 0 3rem
+}
+
+.money-like .money-notice {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin: 1rem auto;
+    text-align: center;
+    color: #595959;
+    font-style: italic;
+}
+
+.money-like .money-code {
+    position: absolute;
+    top: -16rem;
+    left: 50%;
+    display: none;
+    width: 22rem;
+    height: 10rem;
+    margin-left: -12.2rem;
+    padding: 1.2rem 1.2rem 3rem;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    box-shadow: 0 1px 1px 1px #efefef
+}
+
+.money-like .money-code span {
+    display: inline-block;
+    width: 10rem;
+    height: 12rem
+}
+
+.money-like .money-code span.alipay-code {
+    float: left
+}
+
+.money-like .money-code span.alipay-code a {
+    padding: 0
+}
+
+.money-like .money-code span.wechat-code {
+    float: right
+}
+
+.money-like .money-code img {
+    display: inline-block;
+    float: left;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    border: 0
+}
+
+.money-like .money-code b {
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    display: block;
+    margin: 0;
+    text-align: center;
+    color: #666
+}
+
+.money-like .money-code b.notice {
+    line-height: 2rem;
+    margin-top: -1rem;
+    color: #999
+}
+
+.money-like .money-code:after,.money-like .money-code:before {
+    position: absolute;
+    content: '';
+    border: 10px solid transparent
+}
+
+.money-like .money-code:after {
+    bottom: -19px;
+    left: 50%;
+    margin-left: -10px;
+    border-top-color: #fff
+}
+
+.money-like .money-code:before {
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-top-color: #e6e6e6
+}
+
+.alipay-code a {
+    text-decoration: none;
+}
+
+#to-top {
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    text-align: left;
+    text-indent: -9999px;
+    opacity: .5;
+    border-radius: 5%;
+    background: rgba(0,0,0,.6);
+    -khtml-opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+#to-top:active,#to-top:hover {
+    background: rgba(0,0,0,.4)
+}
+
+.to-top-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.to-top-wrap:after,.to-top-wrap:before {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    content: '';
+    -webkit-animation-name: shine;
+    left: 50%;
+    display: block;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite
+}
+
+.to-top-wrap:after {
+    margin-top: -11px;
+    margin-left: -10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-animation-duration: 1.5s;
+    border-top: 10px solid rgba(255,255,255,.5);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent
+}
+
+.to-top-wrap:before {
+    margin-top: -12px;
+    margin-left: -15px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-animation-duration: 3s;
+    border-top: 20px solid rgba(255,255,255,.5);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent
+}
+
+#ds-thread #ds-reset .ds-sync {
+    display: none;
+}
