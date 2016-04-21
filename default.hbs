@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{! Page Meta }}
-    <title>{{meta_title}}</title>
+    <title>戴超的个人博客</title>
     <meta name="description" content="{{meta_description}}" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -32,7 +32,7 @@
         {{{body}}}
 
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="copyright"><a href="{{@blog.url}}">戴超的个人博客</a> &copy; {{date format="YYYY"}}</section>
             <section class="poweredby">Powered by <a href="https://ghost.org">Ghost</a></section>
         </footer>
 
@@ -47,6 +47,5 @@
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="/assets/local_js/common.js"></script>
-    <a href="#" id="to-top" title="我要飞到最高" style="display: inline;"> <div class="to-top-wrap"></div></a>
 </body>
 </html>
